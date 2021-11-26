@@ -4,7 +4,7 @@
 main ()
 {
 long t,bd,kt;//tien, bat dau, ket thuc
-	printf("Luu Y! Gio vao phai lon hon gio ra!\n");
+	printf("Luu Y! Gio ra phai lon hon gio vao!\n");
 	printf("Gio mo cua tu 10h-24h\n");
 	printf("Nhap thoi gian bat dau: ");
 	scanf("%ld",&bd);
