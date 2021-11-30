@@ -2,7 +2,7 @@
 
 int main() {
    int nam;
-   printf("Nhap vao nam ban muon kiem tra: "); scanf("%d",&nam);
+   printf("Nhap vao nam ban muon kiem tra: "); scanf_s("%d",&nam);
    if (((nam % 4 == 0) && (nam % 100!= 0)) || (nam%400 == 0))
       printf("%d la mot nam nhuan", nam);
    else

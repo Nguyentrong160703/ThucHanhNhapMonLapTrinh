@@ -6,13 +6,13 @@ int main()
     int cot1,cot2,cot3,cot4, hs=10;
     float tb;
     printf("\nNhap diem cot 1: ");
-    scanf("%d",&cot1);
+    scanf_s("%d",&cot1);
     printf("\nNhap diem cot 2: ");
-    scanf("%d",&cot2);
+    scanf_s("%d",&cot2);
     printf("\nNhap diem cot 3: ");
-    scanf("%d",&cot3);
+    scanf_s("%d",&cot3);
     printf("\nNhap diem cot 4: ");
-    scanf("%d",&cot4);
+    scanf_s("%d",&cot4);
     tb=(float)((cot1+cot2+cot3+cot4))/4;
     if (tb>=8.5&&tb<=10)
 	{

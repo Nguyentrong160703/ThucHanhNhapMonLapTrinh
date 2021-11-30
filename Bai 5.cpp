@@ -8,7 +8,7 @@ int main()
 	printf("******************************************");
 	int chon;
 	printf("\nLua chon cua ban la (1-3): ");
-	scanf("%d",&chon);
+	scanf_s("%d",&chon);
 	switch(chon)
 	{
 	case 1:
@@ -16,7 +16,7 @@ int main()
 		int x;
 		printf("Ban da lua chon hinh vuong\n");
 		printf("\tHay nhap vao do dai canh hinh vuong: ");
-		scanf("%d",&x);
+		scanf_s("%d",&x);
 		int dientich_hv=x*x;
 		int chuvi_hv=4*x;
 		printf("\tKet qua:\n\t\tChu vi hinh vuong: %d\n",chuvi_hv);
@@ -28,7 +28,7 @@ int main()
 		int a,b;
 		printf("Ban da lua chon hinh chu nhat\n");
 		printf("\tHay nhap vao do dai hai canh hinh chu nhat: ");
-		scanf("%d%d",&a,&b);
+		scanf_s("%d%d",&a,&b);
 		int dientich_hcn=a*b;
 		int chuvi_hcn=2*(a+b);
 		printf("\tKet qua:\n\t\tChu vi hinh chu nhat: %d\n",chuvi_hcn);
@@ -41,7 +41,7 @@ int main()
 		const int pi=3.14;
 		printf("Ban da lua chon hinh tron\n");
 		printf("\tHay nhap vao ban kinh hinh tron: ");
-		scanf("%d",&r);
+		scanf_s("%d",&r);
 		int chuvi_tron=r*pi;
 		int dientich_tron=2*pi*r*r;
 		printf("\tKet qua:\n\t\tChu vi hinh tron: %d\n",chuvi_tron);
@@ -50,5 +50,5 @@ int main()
 		}
 	default :printf("Lua chon khong hop le");
 	}
-	getch();
+	_getch();
 }

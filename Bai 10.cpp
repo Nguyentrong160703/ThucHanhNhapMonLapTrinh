@@ -1,4 +1,5 @@
-#include<stdio.h>
+﻿#include<stdio.h>
+//Tam giác vuông cân
 void veTamGiac1(int n){
 	for(int i=0; i<n; i++){
 		for(int j=0; j<i+1; j++){
@@ -7,6 +8,7 @@ void veTamGiac1(int n){
 		printf("\n");
 	}
 }
+//Tam giác vuông cân đảo ngược
 void veTamGiac2(int n){
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n-i; j++){
@@ -15,6 +17,7 @@ void veTamGiac2(int n){
 		printf("\n");
 	}
 }
+//Tam giac đều
 void veTamGiac5(int n){
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n-i-1; j++){
@@ -26,12 +29,12 @@ void veTamGiac5(int n){
 		printf("\n");
 	}
 }
-
+//Gọi lại các hàm trên
 int main()
 {
 	int n;
 	printf("Nhap n: ");
-	scanf("%d",&n);
+	scanf_s("%d",&n);
 	printf("---Tam giac can 1---\n");
 	veTamGiac1(n);
 	printf("---Tam giac can 2---\n");

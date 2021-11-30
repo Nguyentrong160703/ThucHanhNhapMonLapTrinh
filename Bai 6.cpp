@@ -10,7 +10,7 @@ int main()
 	printf("\t3.Chuc nang tinh chu vi dien tich hinh tron\n");
 	printf("******************************************");
 	printf("\nLua chon cua ban la: ");
-	scanf("%d",&choose);
+	scanf_s("%d",&choose);
 	switch(choose)
 	{
 	case 1:printf("Xin chao cac ban");break;
@@ -19,7 +19,7 @@ int main()
 			int c;
 			printf("\tBan da chon chuc nang doi do C sang do F\n");
 			printf("\tHay nhap gia tri nhiet do (do C): ");
-			scanf("%d",&c);
+			scanf_s("%d",&c);
 			int f=(c*1.8)+32;
 			printf("\t\tGia tri do F la: %d",f);
 			break;
@@ -30,7 +30,7 @@ int main()
 			const int pi=3.14;
 			printf("Ban da chon chuc nang tinh chu vi dien tich hinh tron\n");
 			printf("\tHay nhap vao ban kinh hinh tron: ");
-			scanf("%d",&r);
+			scanf_s("%d",&r);
 			int chuvi_tron=r*pi;
 			int dientich_tron=2*pi*r*r;
 			printf("\tKet qua:\n\t\tChu vi hinh tron: %d",chuvi_tron);
@@ -39,5 +39,5 @@ int main()
 		}
 	default :printf("Lua chon khong hop le");
 	}
-	getch();
+	_getch();
 }

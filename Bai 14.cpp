@@ -7,7 +7,7 @@ int main()
   printf("\n\t\t CHUONG TRINH KIEM TRA KY TU MA HEXA\n\n");
 
  char ch;
-  printf("\t- Nhap vao ky tu ma hex: "); scanf("%c",&ch);
+  printf("\t- Nhap vao ky tu ma hex: "); scanf_s("%c",&ch);
 
   switch (ch)
   {
@@ -25,6 +25,6 @@ int main()
        break;
    default : printf("\n\t=> He thap luc phan khong dung ky so nay!");
    }
- getch();
+ _getch();
  return 0;
 }

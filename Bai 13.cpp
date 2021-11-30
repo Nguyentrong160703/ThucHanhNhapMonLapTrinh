@@ -4,7 +4,7 @@ int main()
 {
 	int a;
 	printf("Nhap vao so tu nhien bat ki (0-9): ");
-	scanf("%d",&a);
+	scanf_s("%d",&a);
 	switch(a)
 	{
 		case 0:printf("Cach doc so vua nhap: Khong");break;
@@ -19,5 +19,5 @@ int main()
 		case 9:printf("Cach doc so vua nhap: Chin");break;
 		default:printf("Gia tri khong hop le");
 	}
-	getch();
+	_getch();
 }

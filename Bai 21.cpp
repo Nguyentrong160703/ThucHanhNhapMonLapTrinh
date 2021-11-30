@@ -6,10 +6,10 @@
 int main()
 {
 	int i, n, x,s=0;
-	printf("Nhap n: ");scanf("%d",&n);
-	printf("Nhap x: "); scanf("%d",&x);
+	printf("Nhap n: ");scanf_s("%d",&n);
+	printf("Nhap x: "); scanf_s("%d",&x);
 	for(i=1; i<=n; i++)
 		s=s+pow(x,i);
 	printf("\nS(%d,%d)=x+x^2+ x^3 + ... +x^n = %3d",x,n,s);
-	getch();
+	_getch();
 }

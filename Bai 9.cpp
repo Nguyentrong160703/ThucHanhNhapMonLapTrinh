@@ -38,15 +38,15 @@ int bai5(float tong, float n){
 }
 int main(){
     float a,b,c,d;
-    float kq1, kq2, kq3, kq4, kq5;
+    float kq1{}, kq2{}, kq3{}, kq4{}, kq5{};
     printf("Nhap vao so a= ");
-	scanf("%f", &a);
+	scanf_s("%f", &a);
     printf("Nhap vao so b= ");
-	scanf("%f", &b);
+	scanf_s("%f", &b);
     printf("Nhap vao so c= ");
-	scanf("%f", &c);
+	scanf_s("%f", &c);
     printf("Nhap vao so d= ");
-	scanf("%f", &d);
+	scanf_s("%f", &d);
     float t1=bai1(kq1, a);
     printf("\nKet qua bai 1 la: %.2f", t1);
     float t2=bai2(kq2);

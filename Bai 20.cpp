@@ -5,10 +5,10 @@
 int main()
 {
 	int i, n, x,t=1;
-	printf("Nhap n: ");scanf("%d",&n);
-	printf("Nhap x: "); scanf("%d",&x);
+	printf("Nhap n: ");scanf_s("%d",&n);
+	printf("Nhap x: "); scanf_s("%d",&x);
 	for(i=1; i<=n; i++)
 		t=t*x;
-	printf("\nTich (x,n) = %3d", t,x,n);
-	getch();
+	printf("\n Tich (x,n) = %3d", t,x,n);
+	_getch();
 }

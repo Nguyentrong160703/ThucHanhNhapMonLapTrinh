@@ -4,7 +4,7 @@ int main()
 {
 	int thang;
 		printf("nhap vao thang:");
-		scanf("%d",&thang);
+		scanf_s("%d",&thang);
 	switch(thang)
 	{
 		case 1:

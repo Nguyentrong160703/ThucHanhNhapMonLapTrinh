@@ -20,7 +20,7 @@ int main()
 	switch(chon)
 	{
         case 1:
-            printf("Nhap vao so n: "); scanf("%d", &n);
+            printf("Nhap vao so n: "); scanf_s("%d", &n);
             printf("Cac so chia het cho 2 la: ");
             for(int i = 0; i<=a; i++){
                 if(i%2==0){
@@ -31,7 +31,7 @@ int main()
             break;
         case 2: 
             do{
-            printf("Nhap vao hai so m,n: "); scanf("%d%d", &m, &n);
+            printf("Nhap vao hai so m,n: "); scanf_s("%d%d", &m, &n);
             printf("Cac so co hang chuc la 2: ");
             }while(m>n);
             for(int i=m; i<=n; i++){
@@ -57,10 +57,10 @@ int main()
             break;
         case 5:
             do{
-            printf("Nhap vao a: "); scanf("%d", &a);
-            printf("Nhap vao b: "); scanf("%d", &b);
+            printf("Nhap vao a: "); scanf_s("%d", &a);
+            printf("Nhap vao b: "); scanf_s("%d", &b);
             }while(a>b);
-            printf("Nhap vao c: "); scanf("%d", &c);
+            printf("Nhap vao c: "); scanf_s("%d", &c);
             printf("Cac so la uoc cua c trong khoang [a,b] la: ");
             for(int i=a; i<=b; i++){
                 if(c%i==0){

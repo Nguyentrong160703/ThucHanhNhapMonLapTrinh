@@ -4,11 +4,11 @@ int main()
 {
 	float tieuluan, giuaki, cuoiki,tb;
 	printf("Diem tieu luan: "); 
-	scanf("%f",&tieuluan);
+	scanf_s("%f",&tieuluan);
 	printf("Diem giua ki: ");
-	scanf("%f", &giuaki);
+	scanf_s("%f", &giuaki);
 	printf("Diem cuoi ki: ");
-	scanf("%f",&cuoiki);
+	scanf_s("%f",&cuoiki);
 	tb=0.2*tieuluan+0.3*giuaki+0.5*cuoiki; //Cong thuc tinh diem trung binh
 	printf("diem tb cua sinh vien la %.2f\n", tb);
     if (tb>=8.5)

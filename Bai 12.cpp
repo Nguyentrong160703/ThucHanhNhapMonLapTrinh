@@ -4,14 +4,14 @@ int main(){
     float d1, d2, d3, d4, tb;
     int hs1, hs2, hs3, hs4;
    
-    printf("\nNhap diem mon 1= "); scanf("%f", &d1);
-    printf("\nNhap diem mon 2= "); scanf("%f", &d2);
-    printf("\nNhap diem mon 3= "); scanf("%f", &d3);
-    printf("\nNhap diem mon 4= "); scanf("%f", &d4);
-    printf("\nSo tin chi mon 1 la: "); scanf("%d", &hs1);
-    printf("\nSo tin chi mon 2 la: "); scanf("%d", &hs2);
-    printf("\nSo tin chi mon 3 la: "); scanf("%d", &hs3);
-    printf("\nSo tin chi mon 4 la: "); scanf("%d", &hs4);
+    printf("\nNhap diem mon 1= "); scanf_s("%f", &d1);
+    printf("\nNhap diem mon 2= "); scanf_s("%f", &d2);
+    printf("\nNhap diem mon 3= "); scanf_s("%f", &d3);
+    printf("\nNhap diem mon 4= "); scanf_s("%f", &d4);
+    printf("\nSo tin chi mon 1 la: "); scanf_s("%d", &hs1);
+    printf("\nSo tin chi mon 2 la: "); scanf_s("%d", &hs2);
+    printf("\nSo tin chi mon 3 la: "); scanf_s("%d", &hs3);
+    printf("\nSo tin chi mon 4 la: "); scanf_s("%d", &hs4);
    
     tb = (d1*hs1 +d2*hs2 +d3*hs3 +d4*hs4)/(hs1+hs2+hs3+hs4); 
     printf("\nDiem trung binh he 10 la: %.1f\n", tb);
