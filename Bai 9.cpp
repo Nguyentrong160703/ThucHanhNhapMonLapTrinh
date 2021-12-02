@@ -1,59 +1,76 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<conio.h>
 #include <math.h>
-int bai1(float tich, float n){
-    tich = 1;
-	for (int i=1; i<=n;i++){
-	tich= tich*i;
+
+int main()
+{
+	int i;
+	printf("\t");
+	for (i = 1; i < 30; i++) printf("* ");
+	printf("\n\t\t\t CHUONG TRINH TINH\n\n");
+	int chon, n, s = 1, s1 = 0;
+	float s2 = 0;
+	printf("\tmoi ban chon nhung chuc nang sau:\n");
+	printf("\t\t1.S=1*2*3**4*5*...*n\n");
+	printf("\t\t2.s=2+4+6+8+...20\n");
+	printf("\t\t3.s=1*2+2*3+3*4+...+n(n+1)\n");
+	printf("\t\t4.s=1/1*2*3+1/2*3*4+...1/n(n+1)(n+2)\n");
+	printf("\t\t5.s=1-2+3-4+...+(-1)^n-1*n\n");
+	printf("\t");
+	for (i = 1; i < 30; i++) printf("* ");
+	printf("\n\nMoi ban chon: ");
+	scanf_s("%d", &chon);
+	switch (chon)
+	{
+	case 1: printf("ban da chon 1\n");
+		printf("nhap n: ");
+		scanf_s("%d", &n);
+		for (int i = 1; i <= n; i++)
+			s *= i;
+		{
+			printf("s=%d\n", s);
+		}
+		break;
+	case 2: printf("ban da chon 2\n");
+		for (int i = 2; i <= 20; i++)
+		{
+			if (i % 2 == 0)
+			{
+				s1 += i;
+			}
+		}
+		printf("s=%d", s1);
+		break;
+	case 3: printf("ban da chon 3\n");
+		printf("nhap n: ");
+		scanf_s("%d", &n);
+		for (int i = 1; i <= n; i++)
+		{
+			s1 += i * (i + 1);
+		}
+		printf("s=%d", s1);
+		break;
+	case 4: printf("ban da chon 4\n");
+		printf("nhap n: ");
+		scanf_s("%d", &n);
+		for (int i = 1; i <= n; i++)
+		{
+			s2 += (float)1 / (i * (i + 1) * (i + 2));
+		}
+		printf("s = %.2f", s2);
+		break;
+	case 5: printf("ban da chon 5\n");
+		printf("nhap n: ");
+		scanf_s("%d", &n);
+		for (int i = 1; i < n; i++)
+		{
+			s1 += pow(-1, i - 1) * i;
+		}
+		printf("s=%d", s1);
+		break;
+
+	default: printf("chuong trinh ket thuc\n");
+		break;
 	}
-    return tich;
-}
-int bai2(float tong){
-	tong = 0;
-	for(int i=2;i<=20;i++,i++){
-	tong+=i;
-	}
-    return tong;
-}
-int bai3(float tong, float n){
-	tong = 0;
-	for (int i=1; i<=n; i++){
-		tong = tong + i*(i+1);
-	}
-    return tong;
-}
-void bai4(float tong, float n){
-	tong = 0;
-    float x =1;
-	for(int i=1; i<=n; i++){
-		tong=tong+(x/(i*(i+1)*(i+2)));
-	}
-    printf("\nKet qua bai 4 la: %.2f", tong);
-}
-int bai5(float tong, float n){
-    tong = 0;
-    for(int i=1; i<=n; i++){
-        tong+=pow((-1),(i-1))*i;
-    }
-    return tong;
-}
-int main(){
-    float a,b,c,d;
-    float kq1{}, kq2{}, kq3{}, kq4{}, kq5{};
-    printf("Nhap vao so a= ");
-	scanf_s("%f", &a);
-    printf("Nhap vao so b= ");
-	scanf_s("%f", &b);
-    printf("Nhap vao so c= ");
-	scanf_s("%f", &c);
-    printf("Nhap vao so d= ");
-	scanf_s("%f", &d);
-    float t1=bai1(kq1, a);
-    printf("\nKet qua bai 1 la: %.2f", t1);
-    float t2=bai2(kq2);
-    printf("\nKet qua bai 2 la: %.2f", t2);
-    float t3=bai3(kq3,b);
-    printf("\nKet qua bai 3 la: %.2f", t3);
-    bai4(kq4,c);
-    float t5=bai5(kq5,d);
-    printf("\nKet qua bai 5 la: %.2f", t5);
+	return 0;
 }
