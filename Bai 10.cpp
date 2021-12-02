@@ -1,44 +1,68 @@
-﻿#include<stdio.h>
-//Tam giác vuông cân
-void veTamGiac1(int n){
-	for(int i=0; i<n; i++){
-		for(int j=0; j<i+1; j++){
-			printf("*");
-		}
-		printf("\n");
-	}
-}
-//Tam giác vuông cân đảo ngược
-void veTamGiac2(int n){
-	for(int i=0; i<n; i++){
-		for(int j=0; j<n-i; j++){
-			printf("*");
-		}
-		printf("\n");
-	}
-}
-//Tam giac đều
-void veTamGiac5(int n){
-	for(int i=0; i<n; i++){
-		for(int j=0; j<n-i-1; j++){
-			printf(" ");
-			}
-		for(int j=0; j<2*i+1; j++){
-			printf("*");
-		}
-		printf("\n");
-	}
-}
-//Gọi lại các hàm trên
+
+#include <stdio.h>
+#include<conio.h>
 int main()
 {
-	int n;
-	printf("Nhap n: ");
-	scanf_s("%d",&n);
-	printf("---Tam giac can 1---\n");
-	veTamGiac1(n);
-	printf("---Tam giac can 2---\n");
-	veTamGiac2(n);
-	printf("---Tam giac can 3---\n");
-	veTamGiac5(n);
+	printf("Hay chon mot trong cac chuc nang ben duoi: \n");
+	printf("==========================================\n");
+	printf("\t1.Hinh tam giac\n\t2.Hinh kim tu thap\n\t3.Hinh tam giac nguoc");
+	printf("\n==========================================");
+	int chon;
+	printf("\nLua chon cua ban la (1-3): ");
+	scanf_s("%d", &chon);
+	switch (chon)
+	{
+	case 1:
+	{
+		int sodong;
+		printf("Ban da lua chon Hinh tam giac\n");
+		printf("Nhap so dong: ");
+		scanf_s("%d", &sodong);
+		int i, j;
+		for (i = 1; i <= sodong; i++) {
+			for (j = 1; j <= i; j++)
+				printf("* ");
+
+			printf("\n");
+		}
 	}
+	break;
+	{
+	case 2:
+		int sodong;
+		printf("Ban da lua chon Hinh kim tu thap\n");
+		printf("Nhap so dong: ");
+		scanf_s("%d", &sodong);
+		int i, j;
+		for (i = 1; i <= sodong; i++) {
+			for (j = 1; j <= sodong - i; j++)
+				printf(" ");
+
+			for (j = 1; j <= i; j++)
+				printf("* ");
+
+			printf("\n");
+		}
+	}
+	break;
+	{
+	case 3:
+		int sodong;
+		printf("Ban da lua chon Hinh tam giac nguoc\n");
+		printf("Nhap so dong: ");
+		scanf_s("%d", &sodong);
+		int i, j;
+		for (i = sodong; i >= 1; i--) {
+			for (j = 1; j <= i; j++)
+				printf("* ");
+
+			printf("\n");
+		}
+	}
+	break;
+	default:
+		printf("\n Moi ban chon lai!");
+		break;
+		return 0;
+	}
+}
