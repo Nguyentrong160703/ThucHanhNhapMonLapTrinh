@@ -1,43 +1,26 @@
+﻿/*Bài toán cổ “Trăm trâu trăm cỏ” :
+		Trâu đứng ăn năm
+		Trâu nằm ăn ba
+		Lụ khụ trâu già
+		Ba con một bó
+		Trăm con ăn cỏ
+		Trăm bó no nê.
+Hỏi có bao nhiêu trâu đứng, trâu nằm, trâu già ?*/
 #include<stdio.h>
-#include<conio.h>
+#include<math.h>
 
 int main()
 {
-    int cot1,cot2,cot3,cot4, hs=10;
-    float tb;
-    printf("\nNhap diem cot 1: ");
-    scanf_s("%d",&cot1);
-    printf("\nNhap diem cot 2: ");
-    scanf_s("%d",&cot2);
-    printf("\nNhap diem cot 3: ");
-    scanf_s("%d",&cot3);
-    printf("\nNhap diem cot 4: ");
-    scanf_s("%d",&cot4);
-    tb=(float)((cot1+cot2+cot3+cot4))/4;
-    if (tb>=8.5&&tb<=10)
+	int i, j;
+	for (i = 0; i <= 100; i++)
 	{
-		printf("diem tb cua sinh vien la %.2f\n", tb);
-		printf("diem chu cua sinh vien la %c\n", '\x41');
+		for (j = 0; j <= 100 - i; j++)
+		{
+			if (i * 5 + j * 3 + (100 - i - j) / 3 == 100)
+			{
+				printf("%d trau dung, %d trau nam, %d trau gia\n", i, j, 100 - i - j);
+			}
+		}
 	}
-	if (tb>=7 && tb<=8.4)
-	{
-		printf("diem tb cua sinh vien la %.2f\n", tb);
-		printf("diem chu cua sinh vien la %c\n", '\x42');
-
-	}
-	if (tb >= 5.5 && tb <= 6.9)
-	{
-		printf("diem tb cua sinh vien la %.2f\n", tb);
-		printf("diem chu cua sinh vien la %c\n", '\x43');
-	}
-	if (tb >= 4 && tb <= 5.4)
-	{
-		printf("diem tb cua sinh vien la %.2f\n", tb);
-		printf("diem chu cua sinh vien la %c\n", '\x44');
-	}
-	if (tb<4)
-	{
-		printf("diem tb cua sinh vien la %.2f\n", tb);
-		printf("diem chu cua sinh vien la %c\n", '\x46');
-	}
+	return 0;
 }

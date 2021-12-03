@@ -1,49 +1,17 @@
 #include<stdio.h>
-#include<math.h>
+#include<conio.h>
+
 int main()
 {
-	int thang;
-		printf("nhap vao thang:");
-		scanf_s("%d",&thang);
-	switch(thang)
+	int n;
+	printf("\n Nhap vao 1 so nguyen duong:");
+	scanf_s("%d", &n);
+	int tong = 0;
+	while (n > 0)
 	{
-		case 1:
-			printf("Thang %d tieng anh doc la January",thang);
-			break;
-		case 2:
-			printf("Thang %d tieng anh doc la February",thang);
-			break;
-		case 3:
-			printf("Thang %d tieng anh doc la March", thang);
-			break;
-		case 4:
-			printf("Thang %d tieng anh doc la April",thang);
-			break;
-		case 5:
-			printf("Thang %d tieng anh doc la May", thang);
-			break;
-		case 6:
-			printf("Thang %d tieng anh doc la June", thang);
-			break;
-		case 7:
-			printf("Thang %d tieng anh doc la July", thang);
-			break;
-		case 8:
-			printf("Thang %d tieng anh doc la August",thang);
-			break;
-		case 9:
-			printf("Thang %d tieng anh doc la September",thang);
-			break;
-		case 10:
-			printf("Thang %d tieng anh doc la October",thang);
-			break;
-		case 11:
-			printf("Thang %d tieng anh doc la November",thang);
-			break;
-		case 12:
-			printf("Thang %d tieng anh doc la December",thang);
-			break;
-		default:
-			printf("Month is invalid"); break;
+		tong = tong + n % 10;
+		n = n / 10;
 	}
+	printf("tong cac chu so trong n la: %d", tong);
+	return 0;
 }

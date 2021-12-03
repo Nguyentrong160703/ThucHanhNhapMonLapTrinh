@@ -1,30 +1,32 @@
-#include <stdio.h>
-#include <conio.h>
+#include<stdio.h>
 
 int main()
 {
-  int i;
-  printf("\n\t\t CHUONG TRINH KIEM TRA KY TU MA HEXA\n\n");
-
- char ch;
-  printf("\t- Nhap vao ky tu ma hex: "); scanf_s("%c",&ch);
-
-  switch (ch)
-  {
-   case 'A': printf("\n\t=> Ky tu A co ma hex la 10");
-       break;
-   case 'B': printf("\n\t=> Ky tu B co ma hex la 11");
-       break;
-   case 'C': printf("\n\t=> Ky tu C co ma hex la 12");
-       break;
-   case 'D': printf("\n\t=> Ky tu D co ma hex la 13");
-       break;
-   case 'E': printf("\n\t=> Ky tu E co ma hex la 14");
-       break;
-   case 'F': printf("\n\t=> Ky tu F co ma hex la 15");
-       break;
-   default : printf("\n\t=> He thap luc phan khong dung ky so nay!");
-   }
- _getch();
- return 0;
+    int n;
+    do
+    {
+        printf("\nNhap vao so nguyen duong n: ");
+        scanf_s("%d", &n);
+        if (n < 0)
+        {
+            printf("\nSo n phai >= 0, vui long nhap lai !");
+        }
+    } while (n < 0);
+    printf("\nSo %d co toan cac chu so le dung khong?\n", n);
+    int Kiemtra = 1;
+    while (n /= 10)
+    {
+        if ((n % 10) % 2 == 0)
+        {
+            Kiemtra = 0;
+        }
+    }
+    if (Kiemtra == 1)
+    {
+        printf("Dung!\n");
+    }
+    else
+    {
+        printf("Sai!\n");
+    }
 }

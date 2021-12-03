@@ -1,28 +1,30 @@
 #include<stdio.h>
-#include<math.h>
+#include<conio.h>
+
 int main()
 {
-	int a,b,ketqua=0;
-	printf("Moi nhap so A: "); scanf_s("%d",&a);
-	printf("Moi nhap so B: "); scanf_s("%d",&b);
-	_flushall();
-	char pt;
-	printf("Moi nhap phep tinh (+,-,x,/): "); scanf_s("%c", &pt);
-	switch(pt)
+	int luachon;
+	do
 	{
-		case '+':
-			ketqua = a+b;
-			break;
-		case '-':
-			ketqua = a-b;
-			break;
-		case '*':
-			ketqua = a*b;
-			break;
-		case '/':
-			ketqua =(float)a/(float)b;
-			break;
-	}
-	printf("\nKet qua cua phep toan la %d", ketqua);
+		printf("**************************************\n");
+		printf("\tMENU CHUC NANG\n");
+		printf("1. In ra man hinh tu Hello. \n");
+		printf("2. In ra man hinh Vong lap for \n");
+		printf("3. In ra man hinh Vong lap while \n");
+		printf("4. Thoat chuong trinh \n");
+		printf("**************************************\n");
+		printf("Ban chon chuc nang nao: ");
+		scanf_s("%d", &luachon);
+		switch(luachon)
+		{
+			case 1: printf("HELLO \n");
+				break;
+			case 2: printf("Vong lap FOR \n");
+				break;
+			case 3: printf("Vong lap WHILE \n");
+				break;
+			case 4: printf("Thoat chuong trinh\n");
+				break;
+		}
+	} while (luachon != 4);
 }
-

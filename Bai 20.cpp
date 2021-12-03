@@ -1,14 +1,16 @@
-// Nhap x, n. Tính T(x,n)=x^n
 #include<stdio.h>
-#include<conio.h>
 
-int main()
-{
-	int i, n, x,t=1;
-	printf("Nhap n: ");scanf_s("%d",&n);
-	printf("Nhap x: "); scanf_s("%d",&x);
-	for(i=1; i<=n; i++)
-		t=t*x;
-	printf("\n Tich (x,n) = %3d", t,x,n);
-	_getch();
+int  main() {
+    float von;
+    float lai;
+    int soThang = 0;
+    printf("nhap vao so tien von An gui: ");
+    scanf_s("%f", &von);
+    while (von < 1000) 
+    {
+        von = von * 1.007;
+        soThang++;
+    }
+    printf("So thang An can gui ngan hang de so tien An nhan duoc >= 1000USD la %d thang\n", soThang);
+
 }

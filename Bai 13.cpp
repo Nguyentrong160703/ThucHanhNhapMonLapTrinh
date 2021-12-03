@@ -1,23 +1,32 @@
-#include <stdio.h> 
-#include <conio.h>
+#include<stdio.h>
+
 int main()
 {
-	int a;
-	printf("Nhap vao so tu nhien bat ki (0-9): ");
-	scanf_s("%d",&a);
-	switch(a)
-	{
-		case 0:printf("Cach doc so vua nhap: Khong");break;
-		case 1:printf("Cach doc so vua nhap: Mot");break;
-		case 2:printf("Cach doc so vua nhap: Hai");break;
-		case 3:printf("Cach doc so vua nhap: Ba");break;
-		case 4:printf("Cach doc so vua nhap: Bon");break;
-		case 5:printf("Cach doc so vua nhap: Nam");break;
-		case 6:printf("Cach doc so vua nhap: Sau");break;
-		case 7:printf("Cach doc so vua nhap: Bay");break;
-		case 8:printf("Cach doc so vua nhap: Tam");break;
-		case 9:printf("Cach doc so vua nhap: Chin");break;
-		default:printf("Gia tri khong hop le");
-	}
-	_getch();
+    int n;
+    do
+    {
+        printf("\nNhap vao so nguyen duong n: ");
+        scanf_s("%d", &n);
+        if (n < 0)
+        {
+            printf("\nSo n phai >= 0, vui long nhap lai !");
+        }
+    } while (n < 0);
+    printf("\nSo %d co toan cac chu so chan dung khong?\n", n);
+    int Kiemtra = 1;
+    while (n /= 10)
+    {
+        if ((n % 10) % 2 == 1)
+        {
+            Kiemtra = 0;
+        }
+    }
+    if (Kiemtra == 1)
+    {
+        printf("Dung!\n");
+    }
+    else
+    {
+        printf("Sai!\n");
+    }
 }

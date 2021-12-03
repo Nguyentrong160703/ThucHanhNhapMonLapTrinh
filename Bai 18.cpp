@@ -1,17 +1,15 @@
-//Tinh S(n)=1/2 + 2/3 + .... + n/n+1
 #include<stdio.h>
-#include<conio.h>
+#include<math.h>
 
 int main()
 {
-	float s=0;
-	int i,n; 
-	printf("\nNhap n: ");
-	scanf_s("%d",&n);
-	for(i=1;i<=n;i++)
-		s+=(float)(i-1)/i;
-	printf("\nS(n)=1/2 + 2/3 + .... + n/n+1 = %5.2f", s);
-	_getch();
+	int n, m = 0, s = 0;
+	printf("Nhap n = "); scanf_s("%d", &n);
+	do
+	{
+		m = m + 1;
+		s += m;
+	} while (s + m + 1 > n);
+	printf("So nguyen duong n la: %d\n", n);
 	return 0;
 }
-	
